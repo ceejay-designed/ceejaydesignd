@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceejay Designed | Your website, designed, built and looked after</title>
+<meta name="description" content="Ceejay Designed builds fast, responsive business websites and landing pages, then looks after them with hosting coordination, updates, maintenance and support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1A2B; --ink-2:#18283F; --paper:#F3F5F8; --white:#fff;
+  --cobalt:#2B50F5; --signal:#2FD08C; --line:#D5DBE5; --muted:#5A6678;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-bottom:14px}
+h3{font-size:21px;font-weight:700;margin-bottom:6px}
+.lead{color:var(--muted);max-width:56ch}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(243,245,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-size:21px;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--cobalt)}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;font-weight:500;font-size:15px}
+nav ul a:hover{color:var(--cobalt)}
+.btn{display:inline-block;background:var(--cobalt);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;border:2px solid var(--cobalt);transition:background .2s}
+.btn:hover{background:#1f3fd0}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.nav-cta{padding:9px 18px;font-size:14px;color:#fff!important}
+
+/* hero */
+.hero{padding:84px 0 92px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6.2vw,72px);font-weight:800;margin-bottom:22px}
+.hero p{font-size:19px;color:var(--muted);max-width:50ch;margin-bottom:32px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* care panel: the memorable element */
+.panel{background:var(--ink);color:#fff;border-radius:18px;padding:26px;box-shadow:0 24px 60px -24px rgba(14,26,43,.55)}
+.panel-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid #2A3B55;margin-bottom:6px}
+.panel-head strong{font-family:var(--display);font-size:18px}
+.live{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--signal)}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(47,208,140,.6);animation:pulse 2s infinite}
+.row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #22334D;opacity:0;transform:translateY(6px);animation:in .5s forwards}
+.row:last-of-type{border-bottom:0}
+.row:nth-of-type(1){animation-delay:.2s}.row:nth-of-type(2){animation-delay:.5s}.row:nth-of-type(3){animation-delay:.8s}.row:nth-of-type(4){animation-delay:1.1s}
+.row span:first-child{color:#B7C3D6}
+.row span:last-child{display:flex;align-items:center;gap:8px;font-weight:600}
+.row span:last-child::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--signal)}
+.note{font-size:13px;color:#8394AD;margin-top:12px}
+@keyframes in{to{opacity:1;transform:none}}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(47,208,140,0)}100%{box-shadow:0 0 0 0 rgba(47,208,140,0)}}
+
+/* sections */
+section{padding:88px 0}
+.head{margin-bottom:44px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.block{border-radius:18px;padding:34px}
+.block.build{background:var(--white);border:1px solid var(--line)}
+.block.care{background:var(--ink);color:#fff}
+.block.care .tag{background:var(--signal);color:var(--ink)}
+.tag{display:inline-block;background:var(--cobalt);color:#fff;font-size:14px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:18px}
+.block h2{font-size:32px}
+.block>p{color:var(--muted);margin-bottom:22px}
+.block.care>p{color:#B7C3D6}
+.items{list-style:none;border-top:1px solid var(--line)}
+.care .items{border-color:#2A3B55}
+.items li{padding:16px 0;border-bottom:1px solid var(--line)}
+.care .items li{border-color:#2A3B55}
+.items b{display:block;font-family:var(--display);font-size:19px;margin-bottom:2px}
+.items span{color:var(--muted);font-size:15.5px}
+.care .items span{color:#B7C3D6}
+.stack{margin-top:30px;color:var(--muted);font-size:15.5px;max-width:78ch}
+
+/* process: a real sequence */
+.process{background:var(--white);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding-top:18px;border-top:3px solid var(--ink)}
+.steps li:last-child{border-color:var(--signal)}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:15px;color:var(--cobalt);display:block;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:15px;line-height:1.5}
+
+/* work */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--line);display:block}
+.card div{padding:24px 26px 28px}
+.card small{color:var(--muted);font-size:14px;display:block;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px;margin:8px 0 16px}
+.card a{font-weight:600;color:var(--cobalt)}
+
+
+/* pricing */
+.sub{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.02em;margin:56px 0 6px}
+.sub:first-of-type{margin-top:0}
+.subnote{color:var(--muted);margin-bottom:22px;max-width:62ch}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column}
+.plan.pick{border:2px solid var(--cobalt)}
+.badge{align-self:flex-start;font-size:13px;font-weight:600;padding:3px 11px;border-radius:999px;background:var(--paper);margin-bottom:14px}
+.plan.pick .badge{background:var(--cobalt);color:#fff}
+.price{font-family:var(--display);font-weight:800;font-size:29px;letter-spacing:-.02em;line-height:1.1}
+.price small{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0}
+.plan>p{color:var(--muted);font-size:15px;margin:10px 0 16px}
+.plan ul{list-style:none;border-top:1px solid var(--line);margin-bottom:16px}
+.plan li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);font-size:15px;position:relative;line-height:1.45}
+.plan li::before{content:"";position:absolute;left:2px;top:16px;width:8px;height:8px;border-radius:50%;background:var(--signal)}
+.best{margin-top:auto;font-size:14px;color:var(--muted)}
+.tbl{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
+.tbl th,.tbl td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--line);font-size:15.5px;vertical-align:top}
+.tbl th{font-family:var(--display);background:var(--paper)}
+.tbl.terms th:first-child{width:32%;font-weight:600}
+.tbl.terms td{color:var(--ink)}
+.fine{color:var(--muted);font-size:14.5px;margin-top:14px;max-width:70ch}
+
+/* about + contact */
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.about p{color:var(--muted);margin-bottom:14px}
+.contact{background:var(--ink);color:#fff;text-align:left}
+.contact h2{max-width:16ch}
+.contact .lead{color:#B7C3D6;margin-bottom:30px}
+.ways{display:flex;gap:14px;flex-wrap:wrap}
+.ways a{border:1px solid #34476A;border-radius:14px;padding:14px 20px;text-decoration:none;min-width:230px}
+.ways a:hover{border-color:var(--signal)}
+.ways small{display:block;color:#8FA0BA;font-size:13px}
+.ways strong{font-weight:600}
+footer{background:var(--ink);color:#8FA0BA;font-size:14px;padding:26px 0;border-top:1px solid #22334D}
+
+@media(max-width:900px){
+  .hero .wrap,.two,.work,.about,.grid3{grid-template-columns:1fr}
+  .hero{padding:56px 0 64px}
+  .steps{grid-template-columns:1fr 1fr}
+  nav ul li:not(:last-child){display:none}
+  section{padding:64px 0}
+}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.row{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Ceejay<span>Designed</span></a>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn nav-cta" href="#contact">Start a project</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Your website, designed, built and looked after to keep it running.</h1>
+      <p>Ceejay Designed builds digital experiences that move businesses forward: fast, responsive websites, followed by hosting coordination, updates, maintenance and support.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/256740873296">Chat on WhatsApp</a>
+        <a class="btn ghost" href="#work">See our work</a>
+      </div>
+    </div>
+    <aside class="panel" aria-label="Example of website care">
+      <div class="panel-head"><strong>Website care</strong><span class="live"><i></i>Running</span></div>
+      <div class="row"><span>Hosting coordination</span><span>Active</span></div>
+      <div class="row"><span>Updates</span><span>Applied</span></div>
+      <div class="row"><span>Maintenance</span><span>On schedule</span></div>
+      <div class="row"><span>Support</span><span>Replies on WhatsApp</span></div>
+      <p class="note">Every site we build can come with ongoing care.</p>
+    </aside>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>One team to build your site and keep it running.</h2>
+      <p class="lead">Most designers hand over a website and disappear. We stay on, so your site keeps working for your business long after launch.</p>
+    </div>
+    <div class="two">
+      <div class="block build">
+        <span class="tag">Build</span>
+        <h2>Web design and development</h2>
+        <p>Custom sites designed around your brand and coded from scratch.</p>
+        <ul class="items">
+          <li><b>Business websites</b><span>Multi-page sites that explain what you do and make it easy to contact you.</span></li>
+          <li><b>Landing pages</b><span>Focused pages for a campaign, product or offer, built to turn visitors into enquiries.</span></li>
+          <li><b>Responsive design</b><span>Every page works on phones, tablets and desktops, because most of your visitors are on mobile.</span></li>
+        </ul>
+      </div>
+      <div class="block care">
+        <span class="tag">Care</span>
+        <h2>Website care (WaaS)</h2>
+        <p>Your website as a service: a simple ongoing arrangement instead of a one-off handover.</p>
+        <ul class="items">
+          <li><b>Hosting coordination</b><span>We help set up and manage your hosting and domain so you don't have to.</span></li>
+          <li><b>Updates</b><span>Content changes, new sections and fixes made when you need them.</span></li>
+          <li><b>Maintenance</b><span>Regular checks to keep your site fast, working and current.</span></li>
+          <li><b>Support</b><span>A real person to message when something needs attention.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="stack">Behind every project: UI/UX design, visual identity, motion and interaction, and reusable design systems, so your site looks like your business and not a template.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="head">
+      <h2>Clear pricing, in Ugandan shillings.</h2>
+      <p class="lead">Buy a website on its own, or add monthly care. These are introductory launch prices.</p>
+    </div>
+
+    <h3 class="sub">Websites (one-time)</h3>
+    <p class="subnote">A separate project fee. You can buy a website without subscribing to monthly care.</p>
+    <div class="grid3">
+      <article class="plan">
+        <span class="badge">Landing page</span>
+        <div class="price">UGX 200,000–350,000</div>
+        <p>A professional page to introduce your services and generate enquiries.</p>
+        <ul><li>One-page responsive website</li><li>Hero, about, services and contact sections</li><li>WhatsApp enquiry button</li><li>Social media links</li><li>Basic SEO setup</li><li>One revision round</li></ul>
+      </article>
+      <article class="plan pick">
+        <span class="badge">Business website (core offer)</span>
+        <div class="price">UGX 400,000–700,000</div>
+        <p>For businesses that want a complete online presence.</p>
+        <ul><li>Up to 5 pages</li><li>Custom visual design</li><li>Responsive mobile, tablet and desktop layouts</li><li>Services and pricing sections</li><li>Contact and WhatsApp integration</li><li>Basic SEO setup</li><li>Two revision rounds</li></ul>
+      </article>
+      <article class="plan">
+        <span class="badge">Advanced business website</span>
+        <div class="price">UGX 800,000–1,500,000+</div>
+        <p>For businesses needing more functionality and custom development.</p>
+        <ul><li>Up to 8 pages, depending on scope</li><li>Advanced UI/UX design</li><li>Booking or enquiry functionality</li><li>Interactive elements</li><li>More detailed SEO setup</li><li>Custom forms and integrations</li><li>Three revision rounds</li></ul>
+      </article>
+    </div>
+
+    <h3 class="sub">Website care (monthly)</h3>
+    <p class="subnote">Ongoing hosting coordination, updates, maintenance and support, billed monthly.</p>
+    <div class="grid3">
+      <article class="plan">
+        <span class="badge">Basic</span>
+        <div class="price">UGX 30,000 <small>/ month</small></div>
+        <p>For small businesses that need a simple online presence kept running.</p>
+        <ul><li>Hosting coordination for one simple website</li><li>Basic uptime and availability checks</li><li>Minor text and image changes: up to 30 minutes/month</li><li>Basic technical support via WhatsApp</li><li>Monthly website check</li><li>Help with domain and renewal reminders</li></ul>
+        <p class="best">Best for personal trainers, small studios and single-page business websites.</p>
+      </article>
+      <article class="plan pick">
+        <span class="badge">Standard (recommended)</span>
+        <div class="price">UGX 60,000 <small>/ month</small></div>
+        <p>For growing businesses that regularly update their information.</p>
+        <ul><li>Everything in Basic</li><li>Minor content updates: up to 90 minutes/month</li><li>Up to 3 update requests/month</li><li>Monthly link, form and mobile display checks</li><li>Basic performance and security checks</li><li>Priority over Basic support requests</li><li>Monthly maintenance summary</li></ul>
+        <p class="best">Best for gyms, fitness studios, salons and growing local businesses.</p>
+      </article>
+      <article class="plan">
+        <span class="badge">Priority</span>
+        <div class="price">UGX 120,000 <small>/ month</small></div>
+        <p>For businesses that depend heavily on their website.</p>
+        <ul><li>Everything in Standard</li><li>Minor content updates: up to 3 hours/month</li><li>Up to 6 update requests/month</li><li>Weekly website checks</li><li>Faster response during agreed support hours</li><li>Monthly performance and maintenance report</li><li>Help coordinating technical issues with hosting providers</li></ul>
+        <p class="best">Best for established gyms, multi-service fitness studios and businesses with frequent updates.</p>
+      </article>
+    </div>
+
+    <h3 class="sub">What counts as maintenance</h3>
+    <p class="subnote">So you know exactly what your monthly plan covers.</p>
+    <table class="tbl">
+      <thead><tr><th>Included in monthly care</th><th>Charged separately</th></tr></thead>
+      <tbody>
+        <tr><td>Text corrections</td><td>New website pages</td></tr>
+        <tr><td>Replacing existing images</td><td>Complete redesigns</td></tr>
+        <tr><td>Updating opening hours</td><td>New booking systems</td></tr>
+        <tr><td>Fixing minor layout issues</td><td>E-commerce development</td></tr>
+        <tr><td>Checking existing links</td><td>Custom integrations</td></tr>
+        <tr><td>Basic website checks</td><td>Professional photography and video</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Hosting, premium software, domain renewals and third-party subscriptions are quoted separately unless a package clearly includes them.</p>
+
+    <h3 class="sub">Care plan terms</h3>
+    <table class="tbl terms">
+      <tbody>
+        <tr><th>Initial setup</th><td>UGX 150,000, paid once before setup begins</td></tr>
+        <tr><th>Minimum subscription</th><td><b>3 consecutive months</b></td></tr>
+        <tr><th>Monthly payment</th><td>Paid in advance</td></tr>
+        <tr><th>Project commencement</th><td>After the setup fee and required client materials are received</td></tr>
+        <tr><th>Late payment</th><td>7-day grace period, followed by notice and possible suspension</td></tr>
+        <tr><th>Cancellation</th><td>30 days' notice, subject to the minimum commitment</td></tr>
+        <tr><th>Domain ownership</th><td>Registered in the client's name where possible</td></tr>
+        <tr><th>Hosting costs</th><td>Disclosed separately unless explicitly included</td></tr>
+        <tr><th>Additional work</th><td>Quoted and approved separately</td></tr>
+        <tr><th>Website handover</th><td>Subject to payment of outstanding fees and agreed handover terms</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:32px"><a class="btn" href="https://wa.me/256740873296">Get a quote on WhatsApp</a></p>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="head">
+      <h2>How a project runs</h2>
+      <p class="lead">A clear path from first message to a live site, with care built in at the end.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Discuss</h3><p>We learn about your business, customers and goals.</p></li>
+      <li><h3>Design</h3><p>Layouts and visual style you approve before any code.</p></li>
+      <li><h3>Build</h3><p>A responsive site coded and tested on real devices.</p></li>
+      <li><h3>Launch</h3><p>Hosting, domain and go-live handled with you.</p></li>
+      <li><h3>Care</h3><p>Updates, maintenance and support to keep it healthy.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head">
+      <h2>Recent work</h2>
+      <p class="lead">Two sites that show how we design for conversion and build for speed.</p>
+    </div>
+    <div class="work">
+      <article class="card">
+        <img src="images/tech-preview.jpeg.png" alt="Nexus Premium Tech landing page" loading="lazy">
+        <div>
+          <small>Landing page for an online tech store</small>
+          <h3>Nexus Premium Tech</h3>
+          <p>A clean, responsive page built around product highlights and a conversion-driven layout.</p>
+          <a href="https://ceejay-designed.github.io/nexus-premium-tech/">View live demo</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/gym-preview.jpeg.png" alt="IronForge gym website" loading="lazy">
+        <div>
+          <small>Business website for a fitness gym</small>
+          <h3>IronForge Gym</h3>
+          <p>Services, coaches and booking enquiries in a responsive layout that is simple to navigate.</p>
+          <a href="https://ceejay-designed.github.io/ironforge/">View live demo</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--white);border-top:1px solid var(--line)">
+  <div class="wrap about">
+    <h2>A designer who also codes, now with a care plan.</h2>
+    <div>
+      <p>Ceejay Designed was started by Cedric, known as Ceejay, a web designer and developer based in Uganda. It began as a personal portfolio and has grown into an agency for businesses that want a website that looks good, loads fast and keeps working.</p>
+      <p>Design and code come from the same hands, so what you approve is what gets built, with no handoff gaps and no surprises.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's build your website.</h2>
+    <p class="lead">Tell us about your business and what you need. We'll reply with a clear plan for your site and its ongoing care.</p>
+    <div class="ways">
+      <a href="https://wa.me/256740873296"><small>WhatsApp</small><strong>Start the chat</strong></a>
+      <a href="mailto:cedricjakana@gmail.com"><small>Email</small><strong>cedricjakana@gmail.com</strong></a>
+      <a href="tel:+256740873296"><small>Phone</small><strong>+256 740 873296</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Ceejay Designed. Web design, development and website care.</div></footer>
+</body>
+</html>
